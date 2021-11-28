@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-function useFetch(url) {
-  const [data, setData] = useState({});
+function useDetail(str) {
+  const [dataDetail, setDataDetail] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const fetchData = async () => {
     try {
-      const { data: responseData } = await axios.get(url);
+      const { data: responseData2 } = await axios.get(
+        "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + str
+      );
 
-      setData(responseData);
+      setDataDetail(responseData2);
       setLoading(false);
     } catch (error) {
       setLoading(false);
@@ -21,7 +23,7 @@ function useFetch(url) {
     fetchData();
   }, []);
 
-  return { data, error, loading };
+  return { dataDetail, loading, error };
 }
 
-export default useFetch;
+export default useDetail;

@@ -13,7 +13,7 @@ export default StyleSheet.create({
   },
   body_container: {
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "flex-start",
   },
   image: {
     width: 100,
@@ -25,7 +25,8 @@ export default StyleSheet.create({
     marginRight:5,
   },
   title: {
-    fontSize: 18,
+    fontSize: 20,
     padding:35,
+    fontFamily: "Cochin",
   },
 });

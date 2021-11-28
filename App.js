@@ -24,9 +24,33 @@ export default function App() {
       headerTitleStyle: {
       fontWeight: 'bold',
       fontSize:26,
+      fontFamily: "Cochin",
     }}}/>
-    {/* <Stack.Screen name="MealsPage" component={Meals}/> */}
-    <Stack.Screen name="DetailPage" component={Detail}/>
+    <Stack.Screen 
+    name="MealsPage" 
+    component={Meals}
+    options={{
+      title:'Meals',
+      headerTitleAlign:'center',
+      headerTintColor:'orange',
+      headerTitleStyle: {
+      fontWeight: 'bold',
+      fontSize:26,
+      fontFamily: "Cochin",
+    }}}
+    />
+    <Stack.Screen
+     name="DetailPage" 
+     component={Detail}
+     options={{
+      title:'Detail',
+      headerTitleAlign:'center',
+      headerTintColor:'orange',
+      headerTitleStyle: {
+      fontWeight: 'bold',
+      fontSize:26,
+      fontFamily: "Cochin",
+    }}}/>
   </Stack.Navigator>
 </NavigationContainer>
   )
